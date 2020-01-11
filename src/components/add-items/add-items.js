@@ -40,7 +40,6 @@ export default class AddItem extends React.Component {
           </button>
         </form>
 
-    )
-        ;
+    );
   }
 }
