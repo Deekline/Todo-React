@@ -15,16 +15,17 @@ export default class AddItem extends React.Component {
   };
 
   onSubmit = ( event ) => {
-    event.preventDefault()
-    this.props.onAdd(this.state.label);
-    this.setState({
+    event.preventDefault();
+    this.props.onAdd( this.state.label );
+    this.setState( {
       label: ''
-    })
+    } );
   };
 
   render() {
 
     return (
+
         <form className='item-add-form'
               onSubmit={ this.onSubmit }
         >
@@ -32,13 +33,14 @@ export default class AddItem extends React.Component {
                  className='form-control'
                  onChange={ this.onLabelChange }
                  placeholder='What needs to be done'
-                 value={this.state.label}
+                 value={ this.state.label }
           />
           <button className='btn btn-outline-secondary'>
             Add new task
           </button>
         </form>
 
-    );
+    )
+        ;
   }
 }
